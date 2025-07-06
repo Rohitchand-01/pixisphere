@@ -16,7 +16,7 @@ export default function HomePage() {
 
   useEffect(() => {
     fetchPhotographers()
-  }, [])
+  }, [fetchPhotographers])
 
   return (
     <div className="p-4 max-w-7xl mx-auto">

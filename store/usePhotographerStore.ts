@@ -1,7 +1,37 @@
 import { create } from 'zustand'
 
+interface Photographer {
+  id: number
+  name: string
+  bio: string
+  location: string
+  price: number
+  rating: number
+  styles: string[]
+  tags: string[]
+  profilePic: string
+}
 
-export const usePhotographerStore = create((set, get) => ({
+interface Filters {
+  rating: number
+  styles: string[]
+  search: string
+  price: number
+  city: string
+  sort: string
+}
+
+interface PhotographerStore {
+  photographers: Photographer[]
+  filteredPhotographers: Photographer[]
+  filters: Filters
+  visibleCount: number
+  fetchPhotographers: () => Promise<void>
+  setFilters: (newFilters: Partial<Filters>) => void
+  loadMore: () => void
+}
+
+export const usePhotographerStore = create<PhotographerStore>((set, get) => ({
   photographers: [],
   filteredPhotographers: [],
   filters: {
