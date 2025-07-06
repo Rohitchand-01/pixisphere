@@ -31,5 +31,5 @@ This project implements:
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/pixisphere.git
+git clone https://github.com/Rohitchand-01/pixisphere.git
 cd pixisphere
