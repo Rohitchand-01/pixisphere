@@ -44,7 +44,7 @@ export const usePhotographerStore = create<PhotographerStore>((set, get) => ({
   },
   visibleCount: 6,
   fetchPhotographers: async () => {
-    const res = await fetch('http://localhost:3001/photographers')
+    const res = await fetch('https://pixisphere-2.onrender.com/photographers')
     const data = await res.json()
     set({ photographers: data, filteredPhotographers: data })
   },
