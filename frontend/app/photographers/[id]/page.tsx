@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function PhotographerProfile({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   
-  const res = await fetch(`https://pixisphere-1.onrender.com/photographers/${id}`, {
+  const res = await fetch(`http://localhost:3001/photographers/${id}`, {
     cache: 'no-store',
   })
 
